@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automapper on Mainroad</title>
+    <link>/tags/automapper/</link>
+    <description>Recent content in Automapper on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 17 May 2018 13:39:35 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/automapper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 ASP.NET Core 中使用 AutoMapper</title>
+      <link>/post/2018-05-17-%E5%9C%A8-asp-net-core-%E4%B8%AD%E4%BD%BF%E7%94%A8-automapper/</link>
+      <pubDate>Thu, 17 May 2018 13:39:35 +0000</pubDate>
+      
+      <guid>/post/2018-05-17-%E5%9C%A8-asp-net-core-%E4%B8%AD%E4%BD%BF%E7%94%A8-automapper/</guid>
+      <description>AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。
+ 安裝套件 Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection  此套件是使用 ASP.Net Core 自帶的 DI Framework，讓 AutoMapper 使用上更簡潔優雅，此套件依賴了 AutoMapper，會自動安裝。
+加入 Startup.cs public void ConfigureServices(IServiceCollection services) { // 加入 AutoMapper services.AddAutoMapper(); services.AddMvc(); }  ASP.Net Core 專案中要使用什麼東西皆是相同套路，在 ConfigureServices 中 AddAutoMapper 這個 Middleware。
+建立 Profile public class UserProfie : Profile { public UserProfie() { // 建立 Profile 對照定義 CreateMap&amp;lt;UserResultModel, UserViewModel&amp;gt;(); } }  Profile的重點在繼承Profile這個類別
+使用 IMapper public class HomeController : Controller { private IMapper _mapper; private IUserService _userService; public HomeController(IMapper mapper, IUserService userService) { this.</description>
+    </item>
+    
+  </channel>
+</rss>

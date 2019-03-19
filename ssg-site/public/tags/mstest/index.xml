@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mstest on Mainroad</title>
+    <link>/tags/mstest/</link>
+    <description>Recent content in Mstest on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 10 May 2018 10:32:09 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mstest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ASP.NET Core 無法使用 DeploymentItem 的替代方案</title>
+      <link>/post/2018-05-10-asp-net-core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-deploymentitem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Thu, 10 May 2018 10:32:09 +0000</pubDate>
+      
+      <guid>/post/2018-05-10-asp-net-core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-deploymentitem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/</guid>
+      <description>在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。
+ 好用的 DeploymentItem 在寫測試時，我們常會用以下作法調用外部檔案。
+using System.IO; using Microsoft.VisualStudio.TestTools.UnitTesting; namespace DeploymentItem.Tests { [TestClass] public class UnitTestWithDeploymentItem { [TestMethod] [DeploymentItem(&amp;quot;TestData\\Sample.csv&amp;quot;)] public void TestMethod1() { var file = new StreamReader(&amp;quot;Sample.csv&amp;quot;); // test code ... } } }  完整使用說明
+但在 ASP.NET Core 專案中使用 DeploymentItem 不會報錯，但測試執行後會找不到檔案（因為實際上沒有作用）！
+解決方式 其實沒有什麼替代方式，就是不要用了，在程式碼直接指定明確的路徑就好了。
+using System.IO; using Microsoft.VisualStudio.TestTools.UnitTesting; namespace DeploymentItem.Tests { [TestClass] public class UnitTest1 { [TestMethod] public void TestMethod1() { var file = new StreamReader(&amp;quot;TestData\\Sample.</description>
+    </item>
+    
+  </channel>
+</rss>

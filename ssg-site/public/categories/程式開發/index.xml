@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>程式開發 on Mainroad</title>
+    <link>/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/</link>
+    <description>Recent content in 程式開發 on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 23 May 2018 05:33:30 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用 LINQ 處理分群情境</title>
+      <link>/post/2018-05-23-%E7%94%A8-linq-%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/</link>
+      <pubDate>Wed, 23 May 2018 05:33:30 +0000</pubDate>
+      
+      <guid>/post/2018-05-23-%E7%94%A8-linq-%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/</guid>
+      <description>  Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源)
+ LINQ的強大不是本文的重點，本文主要是示範如何簡潔的處理資料分群問題。
+情境說明 一組數量不固定的數字集合，想平均分配至30組中。
+土法煉鋼法 LINQ 解法 範例程式 </description>
+    </item>
+    
+    <item>
+      <title>在 ASP.NET Core 中使用 AutoMapper</title>
+      <link>/post/2018-05-17-%E5%9C%A8-asp-net-core-%E4%B8%AD%E4%BD%BF%E7%94%A8-automapper/</link>
+      <pubDate>Thu, 17 May 2018 13:39:35 +0000</pubDate>
+      
+      <guid>/post/2018-05-17-%E5%9C%A8-asp-net-core-%E4%B8%AD%E4%BD%BF%E7%94%A8-automapper/</guid>
+      <description>AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。
+ 安裝套件 Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection  此套件是使用 ASP.Net Core 自帶的 DI Framework，讓 AutoMapper 使用上更簡潔優雅，此套件依賴了 AutoMapper，會自動安裝。
+加入 Startup.cs public void ConfigureServices(IServiceCollection services) { // 加入 AutoMapper services.AddAutoMapper(); services.AddMvc(); }  ASP.Net Core 專案中要使用什麼東西皆是相同套路，在 ConfigureServices 中 AddAutoMapper 這個 Middleware。
+建立 Profile public class UserProfie : Profile { public UserProfie() { // 建立 Profile 對照定義 CreateMap&amp;lt;UserResultModel, UserViewModel&amp;gt;(); } }  Profile的重點在繼承Profile這個類別
+使用 IMapper public class HomeController : Controller { private IMapper _mapper; private IUserService _userService; public HomeController(IMapper mapper, IUserService userService) { this.</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET Core 無法使用 DeploymentItem 的替代方案</title>
+      <link>/post/2018-05-10-asp-net-core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-deploymentitem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Thu, 10 May 2018 10:32:09 +0000</pubDate>
+      
+      <guid>/post/2018-05-10-asp-net-core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-deploymentitem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/</guid>
+      <description>在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。
+ 好用的 DeploymentItem 在寫測試時，我們常會用以下作法調用外部檔案。
+using System.IO; using Microsoft.VisualStudio.TestTools.UnitTesting; namespace DeploymentItem.Tests { [TestClass] public class UnitTestWithDeploymentItem { [TestMethod] [DeploymentItem(&amp;quot;TestData\\Sample.csv&amp;quot;)] public void TestMethod1() { var file = new StreamReader(&amp;quot;Sample.csv&amp;quot;); // test code ... } } }  完整使用說明
+但在 ASP.NET Core 專案中使用 DeploymentItem 不會報錯，但測試執行後會找不到檔案（因為實際上沒有作用）！
+解決方式 其實沒有什麼替代方式，就是不要用了，在程式碼直接指定明確的路徑就好了。
+using System.IO; using Microsoft.VisualStudio.TestTools.UnitTesting; namespace DeploymentItem.Tests { [TestClass] public class UnitTest1 { [TestMethod] public void TestMethod1() { var file = new StreamReader(&amp;quot;TestData\\Sample.</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET Core 啟用 Web.config Transformation</title>
+      <link>/post/2018-05-02-asp-net-core-%E5%95%9F%E7%94%A8-web-config-transformation/</link>
+      <pubDate>Wed, 02 May 2018 15:04:43 +0000</pubDate>
+      
+      <guid>/post/2018-05-02-asp-net-core-%E5%95%9F%E7%94%A8-web-config-transformation/</guid>
+      <description>.Net Framework 4.0 提供了 Transformation 功能，讓 Web.Config 與 app.Config 可以依據組態設定建置不同的參數，這項好用的功能在 .Net Core 的專案中已無法作用，本文紀錄如何再次啟用這好用的功能。
+ 情境說明 ASP.NET Core 2.0 是靠 application.json 來取代 web.config，但有時候我們仍需要在 web.config 作一些環境參數切換，甚至有些第三方套件仍是倚賴 XML 做設定 (ex: Nlog.xml)，以下步驟將說明如何讓 ASP.NET Core 2.0 重新啟用 Transformation
+環境說明  Visual Studio 2017 ASP.Net Core 2.0  加入 web.config 設定 ASP.Net Core 範本專案沒有 web.config, 我們先手動新增並輸入以下設定。
+ &amp;lt;system.webServer&amp;gt; &amp;lt;aspNetCore processPath=&amp;quot;%LAUNCHER_PATH%&amp;quot; arguments=&amp;quot;%LAUNCHER_ARGS%&amp;quot; stdoutLogEnabled=&amp;quot;false&amp;quot; stdoutLogFile=&amp;quot;.\logs\stdout&amp;quot;&amp;gt; &amp;lt;environmentVariables&amp;gt; &amp;lt;environmentVariable name=&amp;quot;ASPNETCORE_ENVIRONMENT&amp;quot; value=&amp;quot;Development&amp;quot; /&amp;gt; &amp;lt;/environmentVariables&amp;gt; &amp;lt;/aspNetCore&amp;gt; &amp;lt;/system.webServer&amp;gt; 
+再新增 web.release.config</description>
+    </item>
+    
+  </channel>
+</rss>

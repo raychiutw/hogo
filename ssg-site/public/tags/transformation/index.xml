@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformation on Mainroad</title>
+    <link>/tags/transformation/</link>
+    <description>Recent content in Transformation on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 02 May 2018 15:04:43 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/transformation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ASP.NET Core 啟用 Web.config Transformation</title>
+      <link>/post/2018-05-02-asp-net-core-%E5%95%9F%E7%94%A8-web-config-transformation/</link>
+      <pubDate>Wed, 02 May 2018 15:04:43 +0000</pubDate>
+      
+      <guid>/post/2018-05-02-asp-net-core-%E5%95%9F%E7%94%A8-web-config-transformation/</guid>
+      <description>.Net Framework 4.0 提供了 Transformation 功能，讓 Web.Config 與 app.Config 可以依據組態設定建置不同的參數，這項好用的功能在 .Net Core 的專案中已無法作用，本文紀錄如何再次啟用這好用的功能。
+ 情境說明 ASP.NET Core 2.0 是靠 application.json 來取代 web.config，但有時候我們仍需要在 web.config 作一些環境參數切換，甚至有些第三方套件仍是倚賴 XML 做設定 (ex: Nlog.xml)，以下步驟將說明如何讓 ASP.NET Core 2.0 重新啟用 Transformation
+環境說明  Visual Studio 2017 ASP.Net Core 2.0  加入 web.config 設定 ASP.Net Core 範本專案沒有 web.config, 我們先手動新增並輸入以下設定。
+ &amp;lt;system.webServer&amp;gt; &amp;lt;aspNetCore processPath=&amp;quot;%LAUNCHER_PATH%&amp;quot; arguments=&amp;quot;%LAUNCHER_ARGS%&amp;quot; stdoutLogEnabled=&amp;quot;false&amp;quot; stdoutLogFile=&amp;quot;.\logs\stdout&amp;quot;&amp;gt; &amp;lt;environmentVariables&amp;gt; &amp;lt;environmentVariable name=&amp;quot;ASPNETCORE_ENVIRONMENT&amp;quot; value=&amp;quot;Development&amp;quot; /&amp;gt; &amp;lt;/environmentVariables&amp;gt; &amp;lt;/aspNetCore&amp;gt; &amp;lt;/system.webServer&amp;gt; 
+再新增 web.release.config</description>
+    </item>
+    
+  </channel>
+</rss>

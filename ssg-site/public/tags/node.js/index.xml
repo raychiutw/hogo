@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Mainroad</title>
+    <link>/tags/node.js/</link>
+    <description>Recent content in Node.js on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 29 Apr 2018 12:27:49 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hexo教學（1）－快速安裝</title>
+      <link>/post/2018-04-29-hexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D/</link>
+      <pubDate>Sun, 29 Apr 2018 12:27:49 +0000</pubDate>
+      
+      <guid>/post/2018-04-29-hexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D/</guid>
+      <description>  那我們就開始吧。
+ 安裝 Node.js 下載Node.js
+安裝 Hexo $ npm install -g hexo-cli
+建立第一個 Blog 請在想要的目錄下打開命令列視窗
+ $ hexo init myblog $ cd myblog $ npm install 
+執行站台  $ hexo server 
+或者
+$ hexo s  在瀏覽器輸入 http://localhost:4000 有看到下圖就成功建立第一個部落格站囉
+ 其他相關教學請參考{% post_link Hexo教學-0-目錄 系列文章目錄 %}
+ </description>
+    </item>
+    
+  </channel>
+</rss>

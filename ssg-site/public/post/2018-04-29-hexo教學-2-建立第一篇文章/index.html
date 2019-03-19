@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hexo教學（2）－第一篇文章 - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Hexo 建立第一篇文章">
+	<meta name="generator" content="Hugo 0.54.0" />
+	<meta property="og:title" content="Hexo教學（2）－第一篇文章" />
+<meta property="og:description" content="Hexo 建立第一篇文章" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/2018-04-29-hexo%E6%95%99%E5%AD%B8-2-%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" />
+<meta property="article:published_time" content="2018-04-29T15:52:38&#43;00:00"/>
+<meta property="article:modified_time" content="2018-04-29T15:52:38&#43;00:00"/>
+
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Mainroad" rel="home">
+				<div class="logo__title">Mainroad</div>
+				<div class="logo__tagline">Just another site</div>
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Hexo教學（2）－第一篇文章</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-04-29T15:52:38">April 29, 2018</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f" rel="category">應用程式</a></span>
+</div>
+</div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="https://raw.githubusercontent.com/raychiutw/blog-images/master/HEXO.jpg" alt="Hexo教學（2）－第一篇文章">
+		</figure><div class="content post__content clearfix">
+			
+
+<blockquote>
+<p>快速建立第一個 Bolg 之後,接下當然是來產生第一篇文章</p>
+</blockquote>
+
+<h4 id="用指令產生文章">用指令產生文章</h4>
+
+<p>， Hexo new &ldquo;文章名稱&rdquo; 可以快速產生一個 markdown 出來
+，產生的檔案放在 /source/post/ 下</p>
+
+<pre><code>npm new first-post
+</code></pre>
+
+<h4 id="產生靜態檔">產生靜態檔</h4>
+
+<p>還記得上篇說提, Hexo 是將 markdown 產生靜態 html 的框架
+有了 markdown 後, 那就讓我們來產生靜態檔吧</p>
+
+<pre><code>$ hexo generate
+</code></pre>
+
+<p>或者</p>
+
+<pre><code>$ hexo g
+</code></pre>
+
+<p>檢查 /public/ 下是否有剛剛那篇的 html 了呢？</p>
+
+<p>讓我們再去看看 <code>http://localhost:4000</code> 是否有新文章了</p>
+
+<blockquote>
+<p>其他相關教學請參考{% post_link Hexo教學-0-目錄 系列文章目錄 %}</p>
+</blockquote>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hexo/" rel="tag">Hexo</a></li>
+	</ul>
+</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="John Doe avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About John Doe</span>
+	</div>
+	<div class="authorbox__description">
+		John Doe&#39;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/2018-04-29-hexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Hexo教學（1）－快速安裝</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/2018-05-01-hexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Hexo教學（0）－目錄</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2018-05-23-%E7%94%A8-linq-%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/">用 LINQ 處理分群情境</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2018-05-20-%E5%9C%A8-git-commit-%E7%A9%BA%E8%B3%87%E6%96%99%E5%A4%BE/">Git Commit 空資料夾</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2018-05-20-hexo%E6%95%99%E5%AD%B8-5-material-%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A/">Hexo教學（5）－Material 主題設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2018-05-20-hexo%E6%95%99%E5%AD%B8-4-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/">Hexo（4）－部署到 GitHub Pages</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2018-05-17-%E5%9C%A8-asp-net-core-%E4%B8%AD%E4%BD%BF%E7%94%A8-automapper/">在 ASP.NET Core 中使用 AutoMapper</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%87%89%e7%94%a8%e7%a8%8b%e5%bc%8f">應用程式</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6">版本控制</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%a8%8b%e5%bc%8f%e9%96%8b%e7%99%bc">程式開發</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e9%9b%9c%e8%a8%98">雜記</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/asp.net-core" title="Asp.net core">Asp.net core</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/automapper" title="Automapper">Automapper</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/c" title="C#">C#</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github" title="Github">Github</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hexo" title="Hexo">Hexo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linq" title="Linq">Linq</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mstest" title="Mstest">Mstest</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/node.js" title="Node.js">Node.js</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/transformation" title="Transformation">Transformation</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/unittest" title="Unittest">Unittest</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Mainroad.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>

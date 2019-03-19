@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>版本控制 on Mainroad</title>
+    <link>/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</link>
+    <description>Recent content in 版本控制 on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 20 May 2018 22:52:15 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Commit 空資料夾</title>
+      <link>/post/2018-05-20-%E5%9C%A8-git-commit-%E7%A9%BA%E8%B3%87%E6%96%99%E5%A4%BE/</link>
+      <pubDate>Sun, 20 May 2018 22:52:15 +0000</pubDate>
+      
+      <guid>/post/2018-05-20-%E5%9C%A8-git-commit-%E7%A9%BA%E8%B3%87%E6%96%99%E5%A4%BE/</guid>
+      <description>Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。
+ 新增 .gitkeep / .keep
+ 在目的空資料夾開啟 Git Bash，執行以下命令，產生空檔案
+$ touch .gitkeep  檔案名稱其實隨意都可，但 .gitkeep / .keep 較常見。
+ 新增 .gitingore
+ 在目的空資夾下新增一個 .gitingore 檔案並編輯如下
+# 忽略所有文件 * # 除了這個文件 !.gitignore  我個人是比較喜歡第一種作法，讓 .gitingore 還是總控在根目錄下。</description>
+    </item>
+    
+  </channel>
+</rss>

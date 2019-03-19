@@ -1,0 +1,38 @@
+baseurl = "/"
+title = "Mainroad"
+languageCode = "zh-tw"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author]
+  name = "John Doe"
+  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  avatar = "img/avatar.png"
+
+[Params]
+  subtitle = "Just another site" # Subtitle of your site
+  description = "John Doe's Personal blog about everything" # Description of your site
+  opengraph = true
+  twitter_cards = false
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true
+  post_navigation = true
+  postSections = ["post"]
+
+[Params.sidebar]
+  home = "right"   # Configure layout for home page
+  list = "right"   # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+# use Chroma for syntax highlight
+pygmentsCodeFences = true # 啟動 Code Fence 區域的高亮效果
+pygmentsCodefencesGuessSyntax = true # 對沒有指定程式類型的 Code Fence 自行推導語言類型
+pygmentsStyle = "fruity" # 指定使用的高亮風格，如 vim 或 fruity 等(預設為 "monokai")
